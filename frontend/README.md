@@ -1,12 +1,46 @@
-# React + Vite
+## Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create a project using this example:
 
-Currently, two official plugins are available:
+```bash
+npx thirdweb create --template vite-javascript-starter
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can start editing the page by modifying `src/main.jsx`. The page auto-updates as you edit the file.
 
-## Expanding the ESLint configuration
+On `src/index.jsx`, you'll find our `ThirdwebProvider` wrapping your app,
+this is necessary for our [hooks](https://portal.thirdweb.com/react) and
+[UI Components](https://portal.thirdweb.com/ui-components) to work.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Environment Variables
+
+To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
+
+### Deploy to IPFS
+
+Deploy a copy of your application to IPFS using the following command:
+
+```bash
+yarn deploy
+```
+
+## Learn More
+
+To learn more about thirdweb, Vite and React, take a look at the following resources:
+
+- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
+- [thirdweb JavaScript Documentation](https://docs.thirdweb.com/react) - learn about our JavaScript/TypeScript SDK.
+- [thirdweb Portal](https://docs.thirdweb.com/react) - check our guides and development resources.
+- [Vite Documentation](https://vitejs.dev/guide/) - learn about Vite features.
+- [React documentation](https://reactjs.org/) - learn React.
+- [Templates](https://thirdweb.com/templates)
+
+You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
+
+## Join our Discord!
+
+For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+
+
+
+this app will help to collect funds by removing the man in the middle.

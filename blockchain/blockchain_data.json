@@ -1,0 +1,543 @@
+{
+  "chain": [
+    {
+      "index": 1,
+      "timestamp": 1744484734214,
+      "transactions": [],
+      "proof": 100,
+      "previous_hash": "1"
+    },
+    {
+      "index": 2,
+      "timestamp": 1744533984707,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744533984653
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "a793ecc5a5c552a1b7df57c41fd0e0d865b0f4e4a6f4984f25012ce70f9f728b"
+    },
+    {
+      "index": 3,
+      "timestamp": 1744534111338,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744534111242
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "a9bab91b6eafd93a1d822dcee52e18adceb2d705bc13166a8220207e31c9961c"
+    },
+    {
+      "index": 4,
+      "timestamp": 1744534196464,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744534196353
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "4b59885d5114cbd5e722b14158f150e12f031117882bc7d814a5f895485b0020"
+    },
+    {
+      "index": 5,
+      "timestamp": 1744534199694,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744534199630
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "ab3000c54f6f3ecdac5c143f71fdb8443077472465b067b7ca00fe68864206eb"
+    },
+    {
+      "index": 6,
+      "timestamp": 1744534228177,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.2,
+            "timestamp": 1744534228093
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "1b6b9cf56aca39c4c7947f2882780c22efa62402a8b31fcf11ff5b6c4bbbfc6b"
+    },
+    {
+      "index": 7,
+      "timestamp": 1744535292611,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744535292509
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "e120e1dc7840235b4a511a1c759b8a3bc61722a8e57d7237a6355b1480076cd4"
+    },
+    {
+      "index": 8,
+      "timestamp": 1744535300506,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "campaignId": "generic",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744535300424
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "dcd361d834f7bb9388c6917342820284553f0f2332f314f28f0b4c3709dbe9ce"
+    },
+    {
+      "index": 9,
+      "timestamp": 1744617740005,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744617739888
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "ebd874c49b1990f772188431e113c24aadb6b6961ef5646efb4d67b9b919553c"
+    },
+    {
+      "index": 10,
+      "timestamp": 1744617810072,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744617809918
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "31abb593516d7b84990ad5e99911969b7cada53f9960d88f99d61e2953a18dd7"
+    },
+    {
+      "index": 11,
+      "timestamp": 1744617819959,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744617819831
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "38035ac95d2a300a8ef8ba8176b79ff3a2183df8258c994caf51b5070e45cd05"
+    },
+    {
+      "index": 12,
+      "timestamp": 1744617864606,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.096,
+            "timestamp": 1744617864473
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "58c95fc49effaef47f7f93c86ae1cfb782d603ac34df12941e308184e89d7df4"
+    },
+    {
+      "index": 13,
+      "timestamp": 1744624603581,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 0.89,
+            "timestamp": 1744624603375
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "661d4fbbf8b12541f20b80f5479ea807de5859d5a49aab0cad45f6e6dfee0a40"
+    },
+    {
+      "index": 14,
+      "timestamp": 1744647046448,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744647046356
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "ecb2a32edb205b91b2c255146abe94f97859814059e6bb0f13eb5d4e4ffc48d3"
+    },
+    {
+      "index": 15,
+      "timestamp": 1744647174426,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 100,
+            "timestamp": 1744647174329
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "89624678b86339c0854d263ddc1da3804746fb1d2c3151eb03738c43a7aeec46"
+    },
+    {
+      "index": 16,
+      "timestamp": 1744647873100,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 0.1,
+            "timestamp": 1744647873026
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "6e0faf706e1564d117f585659fb11240a5e59e759ed2774c047a1dd6e162fd32"
+    },
+    {
+      "index": 17,
+      "timestamp": 1744647950238,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 50,
+            "timestamp": 1744647950173
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "193e0718298934ea2029c6fbbc6fcf46afb4ec12387abf3b484a3b3e6fb6d032"
+    },
+    {
+      "index": 18,
+      "timestamp": 1744816728816,
+      "transactions": [
+        {
+          "sender": {
+            "type": "withdrawal",
+            "campaignId": "7106346106",
+            "sender": "System",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 40,
+            "timestamp": 1744816728815
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "8974f9f8b0abbce879ddaef77d6825d54e1f0635b3f4a12a935638857591acb8"
+    },
+    {
+      "index": 19,
+      "timestamp": 1744816889190,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "5351570127",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 100,
+            "timestamp": 1744816889188
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "fd53e267e4f5026e23e8967f228efb3cc0503f3684180721f299f53931603d1e"
+    },
+    {
+      "index": 20,
+      "timestamp": 1744817305472,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "8271752082",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 10,
+            "timestamp": 1744817305466
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "90e0b8ffca7344b95824992157465f1b27fdae4af2bb619888e943276dfb4e4b"
+    },
+    {
+      "index": 21,
+      "timestamp": 1744824791885,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "8271752082",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 100,
+            "timestamp": 1744824791883
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "488c826f5edc927caf6900adc074f87c84fa24d3d0ad07a6a2a2654c84323ed8"
+    },
+    {
+      "index": 22,
+      "timestamp": 1744825537935,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "4563768776",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 10,
+            "timestamp": 1744825537933
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "f654b59589fa817fe5f831e075ac76f58d93c1a1a143e5276d26cde371f880da"
+    },
+    {
+      "index": 23,
+      "timestamp": 1744826064626,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "8271752082",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 40,
+            "timestamp": 1744826064625
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "ca77125bf5457a4dce114644a5c64715433051c5b369046c4bf424954055e57e"
+    },
+    {
+      "index": 24,
+      "timestamp": 1744826123981,
+      "transactions": [
+        {
+          "sender": {
+            "type": "withdrawal",
+            "campaignId": "8271752082",
+            "sender": "System",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 150,
+            "timestamp": 1744826123980
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "4921a0488636686c9e1ca2540d83ff9ff097450f785a687e8e8a5607aa9045e6"
+    },
+    {
+      "index": 25,
+      "timestamp": 1744876537909,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "5538387808",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 500,
+            "timestamp": 1744876537905
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "bec482c33995c7bbfb245b4237399894019d16593f437f20219c9a860eea959a"
+    },
+    {
+      "index": 26,
+      "timestamp": 1744876593788,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "5538387808",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 500,
+            "timestamp": 1744876593783
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "d82897b053ad7efa12ede562a6036f1a15db793529af1129ca9a9454cef1976d"
+    },
+    {
+      "index": 27,
+      "timestamp": 1744876645375,
+      "transactions": [
+        {
+          "sender": {
+            "type": "withdrawal",
+            "campaignId": "5538387808",
+            "sender": "System",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 1000,
+            "timestamp": 1744876645374
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "453da804b1984174415902da48328640850c36e2414c65c4ce4db397bd4406e3"
+    },
+    {
+      "index": 28,
+      "timestamp": 1744882501590,
+      "transactions": [
+        {
+          "sender": {
+            "type": "Fund Transfer",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 5,
+            "timestamp": 1744882501458
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "961937e4015df88f3e3b3814484d3da2fb804f2001150c42e7f9e21907148d55"
+    },
+    {
+      "index": 29,
+      "timestamp": 1744882619877,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "6857227199",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 100,
+            "timestamp": 1744882619876
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "01a46d897abfbd7ddf1f1d5711d1635513925d0fd8f603e41b83117f245c0a57"
+    },
+    {
+      "index": 30,
+      "timestamp": 1745046380589,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "6857227199",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 10,
+            "timestamp": 1745046380551
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "1ac5df8ea287ed0a2aa15f66d34c3d9d0e94ddc2e794b04a3c8104b4896e779c"
+    },
+    {
+      "index": 31,
+      "timestamp": 1745046571378,
+      "transactions": [
+        {
+          "sender": {
+            "type": "contribution",
+            "campaignId": "6857227199",
+            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "amount": 100,
+            "timestamp": 1745046571376
+          }
+        }
+      ],
+      "proof": 0,
+      "previous_hash": "6c6fdf8e803715d1644024831b868ee045d966c30d01dfb2bf56554b589fee0f"
+    }
+  ],
+  "currentTransactions": [],
+  "nodes": {}
+}

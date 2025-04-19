@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node3000:
+    image: blockchain:1.0
+    container_name: node3000
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+
+  node3001:
+    image: blockchain:1.0
+    container_name: node3001
+    ports:
+      - "3001:3000"
+    environment:
+      - PORT=3000
