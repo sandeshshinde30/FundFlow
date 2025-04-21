@@ -83,8 +83,8 @@ const TransactionsPage = () => {
   // Search transactions by wallet address
   const handleSearchByWallet = async () => {
     if (!searchWalletAddress || isSubmitting) return;
-    
-    setIsLoading(true);
+      
+      setIsLoading(true);
     setIsSubmitting(true);
     try {
       const response = await axios.post(`${BASE_URL}/getTransactionsByWallet`, {
@@ -137,16 +137,16 @@ const TransactionsPage = () => {
             theme: "light",
           });
         }
-      }
-    } catch (error) {
+        }
+      } catch (error) {
       console.error("Failed to search transaction:", error);
       toast.error(error?.response?.data?.message || "Failed to search transaction by hash", {
         position: "top-right",
         autoClose: 5000,
         theme: "light",
       });
-    } finally {
-      setIsLoading(false);
+      } finally {
+        setIsLoading(false);
       setTimeout(() => {
         setIsSubmitting(false);
       }, 1000);
@@ -335,7 +335,7 @@ const TransactionsPage = () => {
                       <span className="text-light-600">Block Hash:</span>
                       <span className="ml-2 font-medium text-light-900 truncate">{selectedTransaction.blockHash?.substring(0, 16)}...</span>
                     </div>
-                    <div>
+                  <div>
                       <span className="text-light-600">Timestamp:</span>
                       <span className="ml-2 font-medium text-light-900">{formatDate(selectedTransaction.timestamp)}</span>
                     </div>
@@ -369,7 +369,7 @@ const TransactionsPage = () => {
                       </span>
                     </div>
                   </div>
-                </div>
+</div>
                 
                 {selectedTransaction.campaignId && (
                   <div className="bg-light-100 p-4 rounded-xl">
@@ -388,8 +388,8 @@ const TransactionsPage = () => {
                         View Campaign Details
                       </button>
                     </div>
-                  </div>
-                )}
+                    </div>
+                  )}
                 
                 <div className="bg-light-100 p-4 rounded-xl">
                   <h3 className="font-medium text-light-900 mb-2">Transaction Type</h3>

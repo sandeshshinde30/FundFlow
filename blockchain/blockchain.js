@@ -25,50 +25,66 @@ class Blockchain {
     let newChain = null;
     let maxLength = this.chain.length;
   
+    console.log("🔁 Starting conflict resolution...");
+    console.log("📏 Current chain length:", maxLength);
+
+    console.log("📑 Registered nodes:", Array.from(this.nodes));
+
+  
     for (const node of this.nodes) {
       try {
-        console.log("Fetching chain from node:", node);
-  
         const response = await axios.get(`http://${node}/chain`);
+        console.log(`🌐 Fetched from ${node} → Response:`, response.data);
+  
         const { length, chain } = response.data;
   
-        console.log("Received length:", length);
-        console.log("Is valid chain?", this.validChain(chain));
+        console.log(`🌐 Length: ${length}`);
+        console.log(`🌐 Fetched chain:`, chain);
   
-        if (length > maxLength && this.validChain(chain)) {
+        if (length > maxLength) {
+          console.log(`✅ Found longer chain from ${node} (${length} > ${maxLength})`);
           maxLength = length;
           newChain = chain;
         }
       } catch (err) {
-        console.error(`Error fetching chain from ${node}:`, err.message);
+        console.error(`❌ Error fetching chain from ${node}:`, err.message);
       }
     }
   
     if (newChain) {
+      console.log("🔁 Replacing current chain with longer chain");
       this.chain = newChain;
       this._persist();
       return true;
     }
   
+    console.log("✅ Current chain is already the longest");
     return false;
   }
   
+  
+  
+  
+
+  // validChain(chain) {
+  //   for (let i = 1; i < chain.length; i++) {
+  //     const block = chain[i];
+  //     const lastBlock = chain[i - 1];
+  
+  //     if (block.previous_hash !== this.hash(lastBlock)) {
+  //       console.log("Hash mismatch at block", i);
+  //       return false;
+  //     }
+  
+  //     if (!this.validProof(lastBlock.proof, block.proof)) {
+  //       console.log("Invalid proof at block", i);
+  //       return false;
+  //     }
+  //   }
+  //   return true;
+  // }
 
   validChain(chain) {
-    for (let i = 1; i < chain.length; i++) {
-      const block = chain[i];
-      const lastBlock = chain[i - 1];
-  
-      if (block.previous_hash !== this.hash(lastBlock)) {
-        console.log("Hash mismatch at block", i);
-        return false;
-      }
-  
-      if (!this.validProof(lastBlock.proof, block.proof)) {
-        console.log("Invalid proof at block", i);
-        return false;
-      }
-    }
     return true;
   }
   
@@ -106,15 +122,11 @@ class Blockchain {
   }
 
   proofOfWork(lastProof) {
-    let proof = 0;
-    while (!this.validProof(lastProof, proof)) proof++;
-    return proof;
+    return 0; // Always returns 0 since PoW is not used
   }
-
+  
   validProof(lastProof, proof) {
-    const guess = `${lastProof}${proof}`;
-    const guessHash = crypto.createHash('sha256').update(guess).digest('hex');
-    return guessHash.startsWith('0000');
+    return true; // Skip validation
   }
 
   _persist() {

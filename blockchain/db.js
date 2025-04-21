@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/unityfund', {
+    await mongoose.connect('mongodb://192.168.47.145:27017/unityfund', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });

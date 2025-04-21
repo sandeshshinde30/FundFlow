@@ -193,16 +193,16 @@ const Contribute = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left Column - Campaign Info */}
         <div className="md:col-span-2 space-y-8">
-          {/* Campaign Overview Card */}
+      {/* Campaign Overview Card */}
           <div className="card bg-white shadow-md">
-            <div className="flex flex-col md:flex-row gap-6">
-              {/* Campaign Image */}
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Campaign Image */}
               <div className="md:w-2/5">
-                <img 
-                  src={campaign.image} 
-                  alt={campaign.title}
-                  className="rounded-md w-full h-48 object-cover"
-                />
+            <img 
+              src={campaign.image} 
+              alt={campaign.title}
+              className="rounded-md w-full h-48 object-cover"
+            />
                 
                 {/* Progress Bar */}
                 <div className="mt-4">
@@ -223,9 +223,9 @@ const Contribute = () => {
                     </span>
                   </div>
                 </div>
-              </div>
-              
-              {/* Campaign Info */}
+          </div>
+          
+          {/* Campaign Info */}
               <div className="md:w-3/5">
                 <h2 className="text-xl font-bold text-light-900 mb-3">{campaign.title}</h2>
                 <p className="text-sm text-light-600 mb-4">
@@ -243,38 +243,38 @@ const Contribute = () => {
                       <span className={`ml-2 font-medium ${isExpired ? "text-error-500" : "text-success-500"}`}>
                         {isExpired ? "Ended" : "Active"}
                       </span>
-                    </div>
-                    <div>
+              </div>
+              <div>
                       <span className="text-light-600">Raised:</span>
                       <span className="ml-2 font-medium text-light-900">{raised} INR</span>
-                    </div>
-                    <div>
+              </div>
+              <div>
                       <span className="text-light-600">Remaining:</span>
                       <span className="ml-2 font-medium text-light-900">{remaining} INR</span>
-                    </div>
-                    <div>
+              </div>
+              <div>
                       <span className="text-light-600">Deadline:</span>
                       <span className="ml-2 font-medium text-light-900">
                         {new Date(campaign.deadline).toLocaleDateString()}
                       </span>
                     </div>
                   </div>
-                </div>
+              </div>
                 
                 <p className="text-sm text-light-600 mb-2">Campaign Description:</p>
                 <p className="text-sm text-light-900 line-clamp-3 mb-2">
                   {campaign.description.substring(0, 150)}...
                 </p>
-              </div>
-            </div>
           </div>
-          
-          {/* Wallet Addresses */}
+        </div>
+      </div>
+      
+      {/* Wallet Addresses */}
           <div className="card bg-white shadow-md">
-            <h3 className="text-lg font-bold mb-4 text-light-900">Wallet Information</h3>
-            
-            <div className="space-y-4">
-              <div>
+        <h3 className="text-lg font-bold mb-4 text-light-900">Wallet Information</h3>
+        
+        <div className="space-y-4">
+          <div>
                 <div className="flex items-center mb-1">
                   <svg className="w-4 h-4 text-primary-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -295,9 +295,9 @@ const Contribute = () => {
                     Please login to contribute to this campaign
                   </div>
                 )}
-              </div>
-              
-              <div>
+          </div>
+          
+          <div>
                 <div className="flex items-center mb-1">
                   <svg className="w-4 h-4 text-success-600 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -305,7 +305,7 @@ const Contribute = () => {
                   <p className="text-sm font-medium text-light-800">Recipient Wallet</p>
                 </div>
                 <div className="p-3 bg-light-100 rounded-md text-light-900 break-all border border-light-300">
-                  {campaign.walletAddress}
+              {campaign.walletAddress}
                 </div>
               </div>
             </div>
@@ -316,25 +316,25 @@ const Contribute = () => {
         <div className="md:col-span-1">
           <div className="card bg-white shadow-md">
             <h3 className="text-lg font-bold mb-4 text-light-900">Make a Contribution</h3>
-            
-            {isExpired ? (
+        
+        {isExpired ? (
               <div className="p-4 bg-error-50 rounded-md text-error-700 border border-error-200">
                 <p className="text-sm">
-                  This campaign has ended and is no longer accepting contributions.
+            This campaign has ended and is no longer accepting contributions.
                 </p>
-              </div>
-            ) : (
+          </div>
+        ) : (
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">
                     Amount (INR)
                   </label>
-                  <FormField
+            <FormField
                     placeholder="Enter amount"
-                    inputType="number"
-                    value={amount}
-                    handleChange={(e) => setAmount(e.target.value)}
-                  />
+              inputType="number"
+              value={amount}
+              handleChange={(e) => setAmount(e.target.value)}
+            />
                   <p className="text-xs text-light-600 mt-1">
                     Minimum contribution: 1 INR
                   </p>
@@ -372,14 +372,14 @@ const Contribute = () => {
                         : `${(walletBalance - (parseFloat(amount) || 0)).toFixed(2)} INR`}
                     </span>
                   </div>
-                </div>
-                
+            </div>
+            
                 <div className="flex flex-col gap-2">
-                  <CustomButton
-                    btnType="button"
+              <CustomButton
+                btnType="button"
                     title={isSubmitting ? "Processing..." : "Contribute Now"}
                     styles={`w-full bg-primary-600`}
-                    handleClick={handleContribute}
+                handleClick={handleContribute}
                     isDisabled={!senderWallet || !amount || isSubmitting || parseFloat(amount) > walletBalance}
                   />
                   
@@ -401,7 +401,7 @@ const Contribute = () => {
                     </button>
                   )}
                 </div>
-              </div>
+            </div>
             )}
           </div>
           

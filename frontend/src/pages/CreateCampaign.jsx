@@ -174,43 +174,43 @@ const CreateCampaign = () => {
       }
     });
   
-      setIsLoading(true);
+        setIsLoading(true);
   
-      try {
-        const user = JSON.parse(localStorage.getItem("user"));
-        const walletAddress = user?.walletAddress;
+        try {
+          const user = JSON.parse(localStorage.getItem("user"));
+          const walletAddress = user?.walletAddress;
   
-        if (!walletAddress) {
+          if (!walletAddress) {
           toast.error("You must be logged in to create a campaign");
-          return;
-        }
+            return;
+          }
   
-        const response = await fetch(`${BASE_URL}/createCampaign`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          const response = await fetch(`${BASE_URL}/createCampaign`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
           body: JSON.stringify({ walletAddress, ...form }),
-        });
+          });
   
-        const data = await response.json();
+          const data = await response.json();
   
-        if (response.ok) {
+          if (response.ok) {
           toast.success("Campaign created successfully!");
-          setTimeout(() => {
+            setTimeout(() => {
             navigate("/my-campaigns");
             isSubmittingRef.current = false;
           }, 2000);
-        } else {
+          } else {
           toast.error(data.message || "Failed to create campaign");
           isSubmittingRef.current = false;
-        }
-      } catch (error) {
-        console.error("Error creating campaign:", error);
+          }
+        } catch (error) {
+          console.error("Error creating campaign:", error);
         toast.error("Something went wrong");
         isSubmittingRef.current = false;
-      } finally {
-        setIsLoading(false);
+        } finally {
+          setIsLoading(false);
       }
     
   };
@@ -275,85 +275,85 @@ const CreateCampaign = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">Your Name *</label>
-                  <FormField
-                    placeholder="e.g. Kiran Mahajan"
-                    inputType="text"
-                    value={form.name}
-                    handleChange={(e) => handleFormFieldChange("name", e)}
-                  />
+            <FormField
+              placeholder="e.g. Kiran Mahajan"
+              inputType="text"
+              value={form.name}
+              handleChange={(e) => handleFormFieldChange("name", e)}
+            />
                   {errors.name && <p className="text-error-500 text-sm mt-1">{errors.name}</p>}
-                </div>
-                
+          </div>
+
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">Campaign Title *</label>
-                  <FormField
-                    placeholder="e.g. Funds for Tamilnadu floods"
-                    inputType="text"
-                    value={form.title}
-                    handleChange={(e) => handleFormFieldChange("title", e)}
-                  />
+            <FormField
+              placeholder="e.g. Funds for Tamilnadu floods"
+              inputType="text"
+              value={form.title}
+              handleChange={(e) => handleFormFieldChange("title", e)}
+            />
                   {errors.title && <p className="text-error-500 text-sm mt-1">{errors.title}</p>}
-                </div>
-                
+          </div>
+
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">Category *</label>
-                  <select
-                    value={form.category}
-                    onChange={(e) => handleFormFieldChange("category", e)}
+            <select
+              value={form.category}
+              onChange={(e) => handleFormFieldChange("category", e)}
                     className="w-full bg-white border border-light-300 rounded-md py-2 px-3 text-light-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="">Select a category</option>
                     {categories.map((category) => (
                       <option key={category} value={category}>{category}</option>
                     ))}
-                  </select>
+            </select>
                   {errors.category && <p className="text-error-500 text-sm mt-1">{errors.category}</p>}
                 </div>
-              </div>
-            </div>
-            
+          </div>
+        </div>
+
             <div className="card">
               <h2 className="text-xl font-bold text-light-900 mb-4">Campaign Story</h2>
               
               <div>
                 <label className="block text-sm font-medium text-light-700 mb-1">Story *</label>
                 <p className="text-xs text-light-500 mb-2">Describe your campaign and why it matters. Be detailed and compelling.</p>
-                <FormField
+          <FormField
                   placeholder="Write your story here..."
-                  isTextArea
-                  value={form.description}
-                  handleChange={(e) => handleFormFieldChange("description", e)}
-                />
+            isTextArea
+            value={form.description}
+            handleChange={(e) => handleFormFieldChange("description", e)}
+          />
                 {errors.description && <p className="text-error-500 text-sm mt-1">{errors.description}</p>}
               </div>
-            </div>
-            
+        </div>
+
             <div className="card">
               <h2 className="text-xl font-bold text-light-900 mb-4">Funding Details</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">Target Amount (INR) *</label>
-                  <FormField
+            <FormField
                     placeholder="e.g. 5000"
-                    inputType="number"
-                    value={form.target}
-                    handleChange={(e) => handleFormFieldChange("target", e)}
-                  />
+              inputType="number"
+              value={form.target}
+              handleChange={(e) => handleFormFieldChange("target", e)}
+            />
                   {errors.target && <p className="text-error-500 text-sm mt-1">{errors.target}</p>}
-                </div>
-                
+          </div>
+
                 <div>
                   <label className="block text-sm font-medium text-light-700 mb-1">End Date *</label>
-                  <FormField
-                    inputType="date"
-                    value={form.deadline}
-                    handleChange={(e) => handleFormFieldChange("deadline", e)}
-                  />
+            <FormField
+              inputType="date"
+              value={form.deadline}
+              handleChange={(e) => handleFormFieldChange("deadline", e)}
+            />
                   {errors.deadline && <p className="text-error-500 text-sm mt-1">{errors.deadline}</p>}
-                </div>
-              </div>
-              
+          </div>
+        </div>
+
               <div className="bg-primary-50 p-4 rounded-md mt-4 flex items-center">
                 <div className="bg-primary-100 p-2 rounded-full mr-3">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -375,11 +375,11 @@ const CreateCampaign = () => {
               <div>
                 <label className="block text-sm font-medium text-light-700 mb-1">Image URL *</label>
                 <p className="text-xs text-light-500 mb-2">Add a compelling image that represents your campaign.</p>
-                <FormField
+          <FormField
                   placeholder="Enter image URL (JPEG, PNG, WebP)"
-                  inputType="url"
-                  value={form.image}
-                  handleChange={(e) => handleFormFieldChange("image", e)}
+            inputType="url"
+            value={form.image}
+            handleChange={(e) => handleFormFieldChange("image", e)}
                 />
                 {errors.image && <p className="text-error-500 text-sm mt-1">{errors.image}</p>}
               </div>
@@ -403,8 +403,8 @@ const CreateCampaign = () => {
                   </div>
                 )}
               </div>
-            </div>
-            
+        </div>
+
             <div className="card bg-light-100">
               <h2 className="text-xl font-bold text-light-900 mb-4">Ready to Launch?</h2>
               
@@ -420,8 +420,8 @@ const CreateCampaign = () => {
                   styles="bg-light-300 text-light-900"
                   handleClick={() => navigate('/')}
                 />
-                <CustomButton 
-                  btnType="submit"
+          <CustomButton
+            btnType="submit"
                   title={isSubmitting ? "Creating Campaign..." : "Create Campaign"}
                   styles="bg-primary-600"
                   handleClick={handleSubmit}
