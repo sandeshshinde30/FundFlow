@@ -4,6 +4,7 @@ import User from '../models/user.js';
 import Transaction from '../models/transaction.js'; // For storing transaction in MongoDB
 import { saveData } from '../storage.js';
 import crypto from 'crypto';
+import { broadcastTransaction } from './websocket.js';
 
 export default (blockchain) => {
   const router = express.Router();
@@ -76,8 +77,20 @@ export default (blockchain) => {
       const previousHash = blockchain.hash(lastBlock);
       const newBlock = blockchain.newBlock(dummyProof, previousHash);
 
+      // Broadcast new transaction to WebSocket clients
+      broadcastTransaction({
+        sender: from,
+        receiver: to,
+        amount,
+        type,
+        timestamp
+      });
+
+
       // Save blockchain
       saveData(blockchain);
+
+
 
       res.status(201).json({
         message: 'Transaction successful and stored on blockchain!',

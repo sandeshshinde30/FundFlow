@@ -2,44 +2,45 @@
   "chain": [
     {
       "index": 1,
-      "timestamp": 1745159633100,
+      "timestamp": 1753016274385,
       "transactions": [],
       "proof": 100,
       "previous_hash": "1"
     },
     {
       "index": 2,
-      "timestamp": 1745159767253,
+      "timestamp": 1753016301960,
       "transactions": [
         {
           "sender": {
-            "type": "Fund Transfer",
-            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
-            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
-            "amount": 3,
-            "timestamp": 1745159767107
+            "type": "contribution",
+            "campaignId": "4820951473",
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 10,
+            "timestamp": 1753016301958
           }
         }
       ],
       "proof": 0,
-      "previous_hash": "d1e8ecb20d31d1dee2dcb31184e42498bed6516e8fe6839281d038034401a1cb"
+      "previous_hash": "81e493797c25be9097793173388d4a5b23163fb69f3bc9da375d640ac5e6a99d"
     },
     {
       "index": 3,
-      "timestamp": 1745160014917,
+      "timestamp": 1753016351376,
       "transactions": [
         {
           "sender": {
             "type": "Fund Transfer",
-            "sender": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
-            "recipient": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
-            "amount": 5,
-            "timestamp": 1745160014745
+            "sender": "0x037c22204c2ac6c372a66837f7b486e53df0bd0d926cf04d5c20410b3453a12d",
+            "recipient": "0x4c0d7c81484703ecd8cc56f7b49d7dfd9c71f91340ea1e1e260f291c51642310",
+            "amount": 10,
+            "timestamp": 1753016351252
           }
         }
       ],
       "proof": 0,
-      "previous_hash": "4a2172cde6f1595ab3c7585c37108e89229812d87cdde6166b4c738aa0df52e6"
+      "previous_hash": "5e39fd2668397b23bbafd85bd2a769e741c947acaa6e5878895d412f137a96e0"
     }
   ],
   "currentTransactions": [],

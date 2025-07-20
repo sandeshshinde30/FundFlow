@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import cors from 'cors';
+import fetch from 'node-fetch'; 
+
 
 import Blockchain from './blockchain.js';
 
@@ -33,13 +35,18 @@ import getCampaignStats from './routes/getCampaignStats.js';
 import getTransactionsByWallet from './routes/getTransactionsByWallet.js';
 import getTransactionByHash from './routes/getTransactionByHash.js';
 import getCampaignsInCurrentMonth from './routes/getCampaignsInCurrentMonth.js';
-
+// import wss from './routes/websocketServer.js';
+// import ws from './routes/websocketClient.js';
+// import { setupWebSocket } from './routes/websocket.js';
 dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
+// setupWebSocket(app);
 connectDB();
 
 const nodeIdentifier = uuidv4().replace(/-/g, '');
@@ -74,4 +81,15 @@ app.use('/getCampaignsInCurrentMonth', getCampaignsInCurrentMonth);
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Blockchain node running on port ${PORT}`);
+
+  // 🔁 Auto-call /nodes/resolve every 10 seconds
+  setInterval(async () => {
+    try {
+      const res = await fetch(`http://localhost:${PORT}/nodes/resolve`);
+      const data = await res.json();
+      console.log(`Auto-resolve response:`, data.message || data);
+    } catch (err) {
+      console.error('Error auto-resolving:', err.message);
+    }
+  }, 10000); // 10 seconds = 10000 ms
 });
